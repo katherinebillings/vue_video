@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<title>Welcome to Vue</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+  <main id="app">
+    <h4>{{welcomeMessage}}</h4>
+
+    <a :href="targetUrl" :class="{ 'no-decorate' : anchorOff }" target="_blank">go to vue!</a>
+
+    <h6 v-if="hasVue">{{vuemessage}}</h6>
+
+    <ul>
+      <li v-for="fruit in deliciousFruit">
+        <p v-on:click="logFruit">{{ fruit.name}} is {{fruit.flavour}}</p>
+      </li>
+    </ul>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
